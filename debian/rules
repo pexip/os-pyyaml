@@ -1,0 +1,52 @@
+#!/usr/bin/make -f
+
+buildvers := $(shell pyversions -sv)
+build3vers := $(shell py3versions -sv)
+
+%:
+	dh $@ --with python2, --with python3
+
+override_dh_auto_test:
+	python setup.py test
+	python3 setup.py test
+
+override_dh_install:
+	dh_install -ppython-yaml 
+	set -e && for i in $(buildvers); do \
+	  python$$i ./setup.py install --install-layout=deb --root $(CURDIR)/debian/python-yaml; \
+	done
+
+	dh_install -ppython-yaml-dbg
+	set -e && for i in $(buildvers); do \
+	  python$$i-dbg ./setup.py install --install-layout=deb --root $(CURDIR)/debian/python-yaml-dbg; \
+	done
+
+	dh_install -ppython3-yaml
+	set -e && for i in $(build3vers); do \
+	  python$$i ./setup.py install --install-layout=deb --root $(CURDIR)/debian/python3-yaml; \
+	done
+
+	dh_install -ppython3-yaml-dbg
+	set -e && for i in $(build3vers); do \
+	  python$$i-dbg ./setup.py install --install-layout=deb --root $(CURDIR)/debian/python3-yaml-dbg; \
+	done
+
+	dh_install
+
+override_dh_installdocs:
+	cp $(CURDIR)/CHANGES $(CURDIR)/changelog
+	dh_installdocs
+	rm  $(CURDIR)/changelog
+
+override_dh_installdeb:
+	rm -rf debian/python-yaml-dbg/usr/share/doc/python-yaml-dbg
+	ln -s python-yaml debian/python-yaml-dbg/usr/share/doc/python-yaml-dbg
+
+	rm -rf debian/python3-yaml-dbg/usr/share/doc/python3-yaml-dbg
+	ln -s python3-yaml debian/python3-yaml-dbg/usr/share/doc/python3-yaml-dbg
+
+	dh_installdeb
+
+override_dh_clean:
+	dh_clean
+	rm -rf build
