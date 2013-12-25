@@ -1,8 +1,9 @@
 Source: pyyaml
 Section: python
 Priority: optional
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org> 
-Uploaders: Scott Kitterman <scott@kitterman.com>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org> 
+XSBC-Pexip-Original-Uploaders: Scott Kitterman <scott@kitterman.com>
 Build-Depends: debhelper (>= 7.3.16), python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~)
 X-Python-Version: >= 2.4
 X-Python3-Version: >= 3.0
@@ -10,6 +11,7 @@ Vcs-Svn: svn://svn.debian.org/python-modules/packages/pyyaml/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyyaml/trunk/
 Standards-Version: 3.9.2
 Homepage: http://pyyaml.org/
+XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
 
 Package: python-yaml
 Architecture: any

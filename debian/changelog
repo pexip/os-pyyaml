@@ -1,3 +1,9 @@
+pyyaml (3.10-2pexip1) pexip; urgency=low
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 25 Dec 2013 04:21:45 +0000
+
 pyyaml (3.10-2) unstable; urgency=low
 
   * Remove python3-yaml-dbg find rule in debian/rules so python3 debug package
