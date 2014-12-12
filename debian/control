@@ -1,21 +1,17 @@
 Source: pyyaml
 Section: python
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org> 
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org> 
 Uploaders: Scott Kitterman <scott@kitterman.com>
-Build-Depends: debhelper (>= 7.3.16), python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~)
-X-Python-Version: >= 2.4
-X-Python3-Version: >= 3.0
-Vcs-Svn: svn://svn.debian.org/python-modules/packages/pyyaml/trunk/
-Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyyaml/trunk/
-Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~), cython, cython-dbg, quilt
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyyaml/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pyyaml/trunk/
+Standards-Version: 3.9.5
 Homepage: http://pyyaml.org/
 
 Package: python-yaml
 Architecture: any
 Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}
-XB-Python-Version: ${python:Versions}
 Description: YAML parser and emitter for Python
  Python-yaml is a complete YAML 1.1 parser and emitter for Python.  It can parse
  all examples from the specification. The parsing algorithm is simple enough to

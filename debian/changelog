@@ -1,12 +1,49 @@
-pyyaml (3.10-2ubuntu0.1) precise-security; urgency=medium
+pyyaml (3.11-2) unstable; urgency=medium
 
-  * SECURITY UPDATE: denial of service via triggered assertion
-    - lib/yaml/scanner.py, lib3/yaml/scanner.py: remove assertion
-    - origin: upstream commit
-      https://bitbucket.org/xi/pyyaml/commits/ddf211a41bb231c365fece5599b7e484e6dc33fc
-    - CVE-2014-9130
+  * Backport security fix for Reachable Assertion security issue (potential
+    remote DoS) - CVE-2014-9130 (Closes: #772815)
+    - Add debian/patches/CVE-2014-9130-invalid-key-assert.diff
 
- -- Steve Beattie <sbeattie@ubuntu.com>  Thu, 08 Jan 2015 18:23:27 -0800
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 12 Dec 2014 08:35:37 -0500
+
+pyyaml (3.11-1) unstable; urgency=medium
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Scott Kitterman ]
+  * New upstream release
+  * Remove empty directory usr/lib/python3/dist-packages/yaml from python3-
+    yaml-dbg
+  * Bump standards version to 3.9.5 without further change
+  * Remove unneeded X-Python-Version/X-Python3-Version from debian/control
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 18 Apr 2014 22:37:37 -0400
+
+pyyaml (3.10-4) unstable; urgency=low
+
+  * Bump debian/compat and minimum debhelper version to 9 for dpkg-buildflags
+    and hardening support
+  * Drop unneeded XB-Python-Version from python-yaml
+
+ -- Scott Kitterman <scott@kitterman.com>  Tue, 26 Jun 2012 11:19:50 -0400
+
+pyyaml (3.10-3) unstable; urgency=low
+
+  * Regenerate ext_yaml.c during build
+    - Update debian/rules to move the upstream file aside during build
+    - Add cython and cython-dbg to build-depends
+  * Add quilt patch system
+    - Add quilt to build-depends
+    - Add --with quilt to debian/rules
+    - Add README.source
+  * Add debian/patches/size_t_not_int.diff to fix FTBFS on S390x
+    (Closes: #676536)
+    - Thanks to Julien Cristau for the patch
+  * Rework debian/rules to support DEB_BUILD_OPTIONS nocheck
+  * Bump standards version to 3.9.3 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 08 Jun 2012 16:36:33 -0400
 
 pyyaml (3.10-2) unstable; urgency=low
 
