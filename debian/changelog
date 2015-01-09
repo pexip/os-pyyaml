@@ -1,3 +1,13 @@
+pyyaml (3.10-2ubuntu0.1) precise-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service via triggered assertion
+    - lib/yaml/scanner.py, lib3/yaml/scanner.py: remove assertion
+    - origin: upstream commit
+      https://bitbucket.org/xi/pyyaml/commits/ddf211a41bb231c365fece5599b7e484e6dc33fc
+    - CVE-2014-9130
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Thu, 08 Jan 2015 18:23:27 -0800
+
 pyyaml (3.10-2) unstable; urgency=low
 
   * Remove python3-yaml-dbg find rule in debian/rules so python3 debug package
