@@ -1,3 +1,19 @@
+pyyaml (3.10-2ubuntu0.1pexip1) pexip; urgency=low
+
+  * New upstream release
+
+ -- John-Mark Bell <jmb@pexip.com>  Tue, 13 Jan 2015 11:26:34 +0000
+
+pyyaml (3.10-2ubuntu0.1) precise-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service via triggered assertion
+    - lib/yaml/scanner.py, lib3/yaml/scanner.py: remove assertion
+    - origin: upstream commit
+      https://bitbucket.org/xi/pyyaml/commits/ddf211a41bb231c365fece5599b7e484e6dc33fc
+    - CVE-2014-9130
+
+ -- Steve Beattie <sbeattie@ubuntu.com>  Thu, 08 Jan 2015 18:23:27 -0800
+
 pyyaml (3.10-2pexip1) pexip; urgency=low
 
   * Prepare Pexip packaging
