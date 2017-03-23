@@ -12,7 +12,7 @@ Vcs-Svn: svn://svn.debian.org/python-modules/packages/pyyaml/trunk/
 Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/pyyaml/trunk/
 Standards-Version: 3.9.2
 Homepage: http://pyyaml.org/
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: python-yaml
 Architecture: any
