@@ -4,11 +4,11 @@ Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org> 
 XSBC-Pexip-Original-Uploaders: Scott Kitterman <scott@kitterman.com>
-Build-Depends: debhelper (>= 9), python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~), cython, cython-dbg, quilt
-Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyyaml/trunk/
-Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pyyaml/trunk/
-Standards-Version: 3.9.5
-Homepage: http://pyyaml.org/
+Build-Depends: debhelper (>= 9), dh-python, python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~), cython, cython-dbg, quilt
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/pyyaml.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/pyyaml.git
+Standards-Version: 3.9.8
+Homepage: https://github.com/yaml/pyyaml
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: python-yaml

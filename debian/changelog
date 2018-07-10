@@ -1,3 +1,30 @@
+pyyaml (3.12-1) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Update Homepage field in debian/control
+  * New upstream release
+  * Add dh-python to build-depends
+  * Bump standards version to 3.9.8 without further change
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ SVN-Git Migration ]
+  * Migrate packaging to git with git-dpm
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 04 Sep 2016 01:38:51 -0400
+
+pyyaml (3.11-3) unstable; urgency=medium
+
+  * Team upload.
+  * d/control: Bump Standards-Version with no other changes necessary.
+  * d/patches/support-high-codepoints.patch: Added to fix support for
+    codepoints above 0xffff.  Given by John R. Lenton.  (Closes: #806826)
+  * d/tests/{control,python2.sh,python3.sh}: Added to test the above patch
+    since a unittest is problematic.
+
+ -- Barry Warsaw <barry@debian.org>  Wed, 02 Dec 2015 16:29:22 -0500
+
 pyyaml (3.11-2pexip1) pexip; urgency=low
 
   * Migrate to Jessie
