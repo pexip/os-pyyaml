@@ -1,3 +1,52 @@
+pyyaml (3.13-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Scott Kitterman ]
+  * Remove obsolete build-depends on quilt
+
+  [ Simon McVittie ]
+  * Apply patch from upstream PR #181 to fix deprecation warning for
+    import of collections.Hashable, which won't work in Python 3.8.
+    Thanks to Niels Thykier. (Closes: #917603)
+  * Standards-Version: 4.3.0 (no changes required)
+  * Set Rules-Requires-Root to no
+  * d/p/0001-support-high-codepoints.patch.patch:
+    Add attribution
+  * Explicitly use #!/bin/sh for autopkgtest scripts
+  * Include debug symbols in python[3]-yaml-dbg instead of creating -dbgsym
+    packages
+  * Enable autopkgtest-pkg-python tests in addition to the ones in d/tests
+  * Skip build-time tests if nocheck is in DEB_BUILD_OPTIONS
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 10 Jan 2019 11:09:51 +0000
+
+pyyaml (3.13-1) unstable; urgency=medium
+
+  [ Chris Lamb ]
+  * d/control: Bump Standards-Version to 4.2.1.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/changelog: Remove trailing whitespaces
+  * d/control: Remove trailing whitespaces
+  * d/rules: Remove trailing whitespaces
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Tristan Seligmann ]
+  * d/watch: Point at PyPI.
+  * d/rules: Various fixes.
+  * d/changelog: Remove trailing newline.
+  * d/rules: Turn on hardening flags.
+  * d/compat, d/control: Bump debhelper compat level to 11.
+  * d/rules: Switch to pybuild. (Closes: #907422)
+
+  [ Scott Kitterman ]
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 02 Nov 2018 19:26:49 -0400
+
 pyyaml (3.12-1) unstable; urgency=medium
 
   [ Scott Kitterman ]
@@ -170,7 +219,7 @@ pyyaml (3.06-1) unstable; urgency=low
   [ Scott Kitterman ]
   * New upstream release
     - Dropped build-dep on python-pyrex (no longer used)
-    - Update debian/rules to build with the new libyaml integration scheme 
+    - Update debian/rules to build with the new libyaml integration scheme
   * Comment out simple-patchsys.mk in debian/rules since it's not currently
     needed
 
@@ -233,4 +282,3 @@ pyyaml (3.04-1) unstable; urgency=low
     - fix an obscure issue with yaml_path_resolver: changeset 246
 
  -- Scott Kitterman <scott@kitterman.com>  Wed,  4 Apr 2007 15:50:36 -0400
-
