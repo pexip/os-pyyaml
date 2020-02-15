@@ -9,7 +9,7 @@ Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/pyyaml.git
 Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/pyyaml.git
 Standards-Version: 3.9.8
 Homepage: https://github.com/yaml/pyyaml
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
 
 Package: python-yaml
 Architecture: any
