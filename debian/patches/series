@@ -1,1 +1,2 @@
-support-high-codepoints.patch
+0001-support-high-codepoints.patch.patch
+0002-Import-Hashable-from-collections.abc.patch

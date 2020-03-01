@@ -1,11 +1,8 @@
-From 3ab78f1d6df268e4ed1d9c10de2cbf7ec19decb3 Mon Sep 17 00:00:00 2001
-From: Barry Warsaw <barry@python.org>
-Date: Tue, 1 Dec 2015 18:15:20 -0500
-Subject: =?UTF-8?q?Fix=20support=20for=20codepoints=20over=200xffff=20acco?=
- =?UTF-8?q?rding=20to=20the=20spec.=20=20Given=20by=20John=0AR.=20Lenton.?=
- =?UTF-8?q?=20=20Closes:=20#806826.?=
+From: "John R. Lenton" <john.lenton@canonical.com>
+Date: Tue, 1 Dec 2015 22:44:34 +0000
+Subject: Fix support for codepoints over 0xffff according to the spec
 
-Patch-Name: support-high-codepoints.patch
+Bug-Debian: https://bugs.debian.org/806826
 ---
  lib/yaml/emitter.py  | 7 ++++++-
  lib/yaml/reader.py   | 9 +++++++--
