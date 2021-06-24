@@ -1,0 +1,20 @@
+Description: Patch upstream test system to make test failures fatal
+Author: Scott Kitterman <scott@kitterman.com>
+Bug-Debian: https://bugs.debian.org/918893
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2020-04-15
+
+--- pyyaml-5.3.1.orig/tests/lib3/test_appliance.py
++++ pyyaml-5.3.1/tests/lib3/test_appliance.py
+@@ -111,8 +111,10 @@ def display(results, verbose):
+     sys.stdout.write('TESTS: %s\n' % total)
+     if failures:
+         sys.stdout.write('FAILURES: %s\n' % failures)
++        sys.exit(1)
+     if errors:
+         sys.stdout.write('ERRORS: %s\n' % errors)
++        sys.exit(1)
+     return not (failures or errors)
+ 
+ def run(collections, args=None):

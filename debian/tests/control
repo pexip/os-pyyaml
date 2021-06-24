@@ -2,7 +2,8 @@
 # code point is higher than upstream pyyaml supports, but with the quilt
 # patch, it will work.  Unfortunately, we have not been able to correctly add
 # a unittest for the problem, so DEP-8 will have to do.
-
-Tests: python2.sh
+# 2020-04-15 scott@kitterman.com: Now we run the upstream test suite too.
+# Upstream now supports these, we have no patches.
 
 Tests: python3.sh
+Depends: @, python3-all

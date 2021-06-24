@@ -1,3 +1,119 @@
+pyyaml (5.3.1-5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Andreas Beckmann ]
+  * python3-yaml: Copy Breaks: python (<< 2.7.18), python-minimal (<< 2.7.18),
+    libpython-stdlib (<< 2.7.18) from python2.7 and add
+    Breaks: python-yaml (<< 5.3.1-2) for smoother upgrades from buster.
+    In some upgrade scenarios (mostly involving ros-* packages) these Breaks
+    in python2.7 were ineffective because the unversioned python packages got
+    higher scores. Copying the Breaks to python3-yaml which is the first
+    python package scoring higher than the to-be-removed packages solves these
+    issues.  (Closes: #989930)
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 24 Jun 2021 19:02:58 -0400
+
+pyyaml (5.3.1-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + python3-yaml-dbg: Add Multi-Arch: same.
+
+  [ Stefano Rivera ]
+  * Resolve CVE-2020-14343, more trivial RCEs in .load() and FullLoader.
+    (Closes: #966233)
+
+ -- Stefano Rivera <stefanor@debian.org>  Fri, 21 May 2021 11:11:00 -0400
+
+pyyaml (5.3.1-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Michael Hudson-Doyle ]
+  * d/tests/control: Add python3-all to Depends:.
+  * d/control: Add myself to Uploaders.
+
+ -- Michael Hudson-Doyle <mwhudson@debian.org>  Fri, 23 Oct 2020 12:33:33 +1300
+
+pyyaml (5.3.1-2) unstable; urgency=medium
+
+  * Drop support for python2 (Closes: #938309)
+  * Delete obsolete README.source
+  * Replace autopkgtest-pkg-python with running the actual upstream test suite
+  * Set Multi-Arch allowed for python3-yaml (Closes: #918804)
+  * Patch upstream test system to make test failures fatal (Closes: #918893)
+  * Delete ancient version constraints in Build-Depends for python3-all-dev
+    and libyaml-dev
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 15 Apr 2020 11:13:39 -0400
+
+pyyaml (5.3.1-1) unstable; urgency=medium
+
+  * New upstream security release
+    - Issue was already fixed in 5.3-2 in Debian, but this update switches us
+      to the final upstream version of the fix
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 18 Mar 2020 23:57:48 -0400
+
+pyyaml (5.3-2) unstable; urgency=high
+
+  [ Emmanuel Arias ]
+  * Call python2 instead of python in autopkgtest. (Closes: #948492)
+  * d/control: python-yaml-dbg depends on python2-dbg instead of python-dbg.
+    - Patch by Matthias Klose.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Name,
+    Repository, Repository-Browse.
+
+  [ Scott Kitterman ]
+  * Add d/p/CVE-2020-1747.patch due to command injection vulnerability
+    (Closes: #953013)
+    - Resolves CVE-2020-1747: arbitrary command execution through python/
+      object/new when FullLoader is used
+  * Bump standards-version to 4.5.0 without further change
+
+ -- Scott Kitterman <scott@kitterman.com>  Fri, 06 Mar 2020 21:56:58 -0500
+
+pyyaml (5.3-1) unstable; urgency=medium
+
+  * New upstream relaese
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 08 Jan 2020 02:14:32 -0500
+
+pyyaml (5.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Scott Kitterman ]
+  * New upstream release
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 11 Dec 2019 00:35:29 -0500
+
+pyyaml (5.1.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+
+  [ Scott Kitterman ]
+  * New upstream release
+    - Dropped all patches, incorporated in upstream release
+  * Update debian/copyright
+  * Update autopkgtests to use yaml.FullLoader to avoid deprecation warnings
+    - https://github.com/yaml/pyyaml/wiki/PyYAML-yaml.load(input)-Deprecation
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 04 Aug 2019 19:00:21 -0400
+
 pyyaml (3.13-2) unstable; urgency=medium
 
   * Team upload
