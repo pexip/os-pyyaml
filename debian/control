@@ -11,7 +11,7 @@ Vcs-Browser: https://salsa.debian.org/python-team/modules/pyyaml
 Standards-Version: 4.3.0
 Homepage: https://github.com/yaml/pyyaml
 Testsuite: autopkgtest-pkg-python
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-yaml
 Architecture: any
