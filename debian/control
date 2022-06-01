@@ -2,41 +2,26 @@ Source: pyyaml
 Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
-XSBC-Pexip-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-XSBC-Pexip-Original-Uploaders: Scott Kitterman <scott@kitterman.com>
-Build-Depends: debhelper (>= 11), dh-python, python-all-dev (>=2.6.5-13~), python-all-dbg, python3-all-dev (>= 3.1.2-10~), python3-all-dbg, libyaml-dev (>=0.1.2~), cython, cython-dbg
+XSBC-Pexip-Original-Maintainer: Debian Python Team <team+python@tracker.debian.org>
+XSBC-Pexip-Original-Uploaders: Scott Kitterman <scott@kitterman.com>,
+           Michael Hudson-Doyle <mwhudson@debian.org>
+Build-Depends: debhelper-compat (= 12), dh-python, python3-all-dev, python3-all-dbg, libyaml-dev, cython3, cython3-dbg
 Rules-Requires-Root: no
-Vcs-Git: https://salsa.debian.org/python-team/modules/pyyaml.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/pyyaml
-Standards-Version: 4.3.0
+Vcs-Git: https://salsa.debian.org/python-team/packages/pyyaml.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/pyyaml
+Standards-Version: 4.5.0
 Homepage: https://github.com/yaml/pyyaml
-Testsuite: autopkgtest-pkg-python
 XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
-
-Package: python-yaml
-Architecture: any
-Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}
-Description: YAML parser and emitter for Python
- Python-yaml is a complete YAML 1.1 parser and emitter for Python.  It can parse
- all examples from the specification. The parsing algorithm is simple enough to
- be a reference for YAML parser implementors. A simple extension API is also
- provided.  The package is built using libyaml for improved speed.
-
-Package: python-yaml-dbg
-Section: debug
-Architecture: any
-Depends: python-yaml (= ${binary:Version}), python-dbg, ${shlibs:Depends}, ${misc:Depends}
-Description: YAML parser and emitter for Python (debug build)
- Python-yaml is a complete YAML 1.1 parser and emitter for Python.  It can parse
- all examples from the specification. The parsing algorithm is simple enough to
- be a reference for YAML parser implementors. A simple extension API is also
- provided.  The package is built using libyaml for improved speed.
- .
- This package contains the extension built for the Python debug interpreter.
 
 Package: python3-yaml
 Architecture: any
+Multi-Arch: allowed
 Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Breaks:
+ python (<< 2.7.18),
+ python-minimal (<< 2.7.18),
+ libpython-stdlib (<< 2.7.18),
+ python-yaml (<< 5.3.1-2),
 Description: YAML parser and emitter for Python3
  Python3-yaml is a complete YAML 1.1 parser and emitter for Python3.  It can
  parse all examples from the specification. The parsing algorithm is simple
@@ -47,6 +32,7 @@ Package: python3-yaml-dbg
 Section: debug
 Architecture: any
 Depends: python3-yaml (= ${binary:Version}), python3-dbg, ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
 Description: YAML parser and emitter for Python3 (debug build)
  Python3-yaml is a complete YAML 1.1 parser and emitter for Python3.  It can
  parse all examples from the specification. The parsing algorithm is simple

@@ -1,2 +1,2 @@
-0001-support-high-codepoints.patch.patch
-0002-Import-Hashable-from-collections.abc.patch
+fatal_test_failures.patch
+cve-2020-14343.patch
