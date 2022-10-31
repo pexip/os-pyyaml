@@ -1,3 +1,57 @@
+pyyaml (6.0-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ Gordon Ball ]
+  * Add myself to Uploaders
+  * Drop Scott Kitterman from Uploaders; thanks for your work on this package
+  * Upload to unstable (Closes: #1008262)
+
+ -- Gordon Ball <gordon@chronitis.net>  Mon, 31 Oct 2022 21:20:23 +0000
+
+pyyaml (6.0-2) experimental; urgency=medium
+
+  [ Stefano Rivera ]
+  * Drop Breaks added in 5.3.1-5 for smoother buster to bullseye upgrades, no
+    longer needed.
+
+  [ Gordon Ball ]
+  * Build using pybuild-plugin-pyproject
+  * autopkgtest: allow stderr to avoid failures due to syntax hints
+
+ -- Gordon Ball <gordon@chronitis.net>  Mon, 03 Oct 2022 08:08:38 +0000
+
+pyyaml (6.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  * New upstream version 6.0
+  * Rebase patches
+  * Update rules and tests for lib3 -> lib
+  * Patch out distutils configuration change
+  * Update name of README file to install
+
+ -- Gordon Ball <gordon@chronitis.net>  Mon, 25 Oct 2021 18:44:33 +0000
+
+pyyaml (5.4.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Gordon Ball ]
+  * Drop python3-yaml-dbg (Closes: #994371)
+  * Ensure the source for the cython extension is regenerated at build time
+    and successfully built, based on a patch from Helmet Grohne (Closes:
+    #981601)
+  * Version the dependency on libyaml to >= 0.2.2 (Closes: #967025)
+  * Update Standards-Version to 4.6.0 (no changes)
+  * New upstream version 5.4.1
+  * Rebase patches, drop (upstream) cve-2020-14343.patch
+  * Build-depend on python3-setuptools
+  * Update Debhelper compat level to 13
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 08 Oct 2021 21:02:23 +0000
+
 pyyaml (5.3.1-5) unstable; urgency=medium
 
   * Team upload.

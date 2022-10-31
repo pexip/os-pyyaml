@@ -3,12 +3,7 @@ set -eu
 
 for i in $(py3versions -sv); do
     echo "-- running tests for "$i" plain --" ;
-    python$i -c "import sys ; sys.path.insert(0, 'tests/lib3'); import test_all; test_all.main([])";
-done
-
-for i in $(py3versions -sv); do
-    echo "-- running tests for "$i" debug --" ;
-    python$i -c "import sys ; sys.path.insert(0, 'tests/lib3'); import test_all; test_all.main([])";
+    python$i -c "import sys ; sys.path.insert(0, 'tests/lib'); import test_all; test_all.main([])";
 done
 
 export PYTHONIOENCODING='utf-8'
