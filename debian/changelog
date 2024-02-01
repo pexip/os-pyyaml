@@ -1,3 +1,9 @@
+pyyaml (6.0-3+b2+pexip24u2) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:27:54 +0000
+
 pyyaml (6.0-3+b2pexip1) pexip-bookworm; urgency=medium
 
   * Bump version to supercede Debian point release binNMU.
