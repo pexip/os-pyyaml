@@ -1,26 +1,28 @@
 Source: pyyaml
-Section: python
-Priority: optional
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Gordon Ball <gordon@chronitis.net>,
            Michael Hudson-Doyle <mwhudson@debian.org>
+Section: python
+Priority: optional
 Build-Depends: debhelper-compat (= 13),
                pybuild-plugin-pyproject,
-               dh-python,
+               dh-sequence-python3,
                python3-all-dev,
                python3-setuptools,
-               libyaml-dev (>= 0.2.2~),
-               cython3
-Rules-Requires-Root: no
-Vcs-Git: https://salsa.debian.org/python-team/packages/pyyaml.git
+               libyaml-dev,
+               cython3,
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/python-team/packages/pyyaml
-Standards-Version: 4.6.1
+Vcs-Git: https://salsa.debian.org/python-team/packages/pyyaml.git
 Homepage: https://github.com/yaml/pyyaml
+Rules-Requires-Root: no
 
 Package: python3-yaml
 Architecture: any
 Multi-Arch: allowed
-Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Depends: ${python3:Depends},
+         ${shlibs:Depends},
+         ${misc:Depends}
 Description: YAML parser and emitter for Python3
  Python3-yaml is a complete YAML 1.1 parser and emitter for Python3.  It can
  parse all examples from the specification. The parsing algorithm is simple
