@@ -6,12 +6,7 @@ export PYBUILD_NAME=yaml
 build3vers := $(shell py3versions -sv)
 
 %:
-	dh $@ --with python3 --buildsystem pybuild
-
-override_dh_auto_configure:
-	# delete cython-generated extension source to ensure it is recreated
-	rm -f ext/_yaml.c
-	dh_auto_configure
+	dh $@ --buildsystem pybuild
 
 override_dh_auto_test:
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
@@ -20,7 +15,7 @@ ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	  python$$i -c "import sys ; sys.path.insert(0, '.pybuild/cpython3_"$$i"_yaml/build'); import _yaml" \
 	  echo "-- running tests for "$$i" plain --" ; \
 	  python$$i -c "import sys ; sys.path.insert(0, '.pybuild/cpython3_"$$i"_yaml/build'); \
-	      sys.path.insert(0, 'tests/lib'); import test_all; test_all.main([])";\
+	      sys.path.insert(0, 'tests/lib'); sys.path.insert(0, 'tests/legacy_tests'); import test_all; test_all.main([])";\
 	done
 endif
 

@@ -1,3 +1,38 @@
+pyyaml (6.0.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * Make d/watch case-insensitive
+  * New upstream version 6.0.2
+  * Switch from cython3-legacy back to cython3
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 12 Aug 2024 21:36:10 +0200
+
+pyyaml (6.0.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Bas Couwenberg ]
+  * Switch to cython3-legacy
+    Closes: #1056877
+
+  [ Andreas Tille ]
+  * Fix clean target
+    Closes: #1048163
+  * Standards-Version: 4.6.2 (routine-update)
+  * Reorder sequence of d/control fields by cme (routine-update)
+  * Remove trailing whitespace in debian/copyright (routine-update)
+  * Build-Depends: s/dh-python/dh-sequence-python3/ (routine-update)
+  * Add salsa-ci file (routine-update)
+  * watch file standard 4 (routine-update)
+
+ -- Andreas Tille <tille@debian.org>  Thu, 11 Jan 2024 08:43:21 +0100
+
+pyyaml (6.0.1-1) unstable; urgency=medium
+
+  * New upstream version 6.0.1
+
+ -- Gordon Ball <gordon@chronitis.net>  Sat, 22 Jul 2023 19:42:38 +0000
+
 pyyaml (6.0-3+b2+pexip24u2) pexip-bookworm; urgency=medium
 
   * New versioning scheme

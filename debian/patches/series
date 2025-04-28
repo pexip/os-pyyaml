@@ -1,2 +1,2 @@
-fatal_test_failures.patch
-0002-Avoid-setuptools-emulated-distutils-due-to-pybuild-i.patch
+#fatal_test_failures.patch
+#0002-Avoid-setuptools-emulated-distutils-due-to-pybuild-i.patch
